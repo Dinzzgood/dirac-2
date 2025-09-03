@@ -215,7 +215,18 @@ img {max-width:100%; height:auto; display:block;}
       color: #ffffff;
     }
 
-    /* Card default (untuk elemen umum) */
+    /* === Hapus background putih/abu === */
+    .bg-light,
+    section,
+    .section,
+    .container,
+    .container-fluid,
+    footer {
+      background: #000 !important;
+      color: #fff !important;
+    }
+
+    /* === Card default === */
     .card {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(6px);
@@ -225,7 +236,7 @@ img {max-width:100%; height:auto; display:block;}
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
-    /* Tombol utama warna emas */
+    /* === Tombol utama warna emas === */
     .btn-primary {
       background: linear-gradient(90deg, #e0a85f, #d18b28);
       border: none;
@@ -237,7 +248,7 @@ img {max-width:100%; height:auto; display:block;}
       transform: scale(1.02);
     }
 
-    /* Tombol outline biar kontras */
+    /* === Tombol outline putih === */
     .btn-outline-light {
       border: 1px solid #fff;
       color: #fff;
@@ -251,18 +262,17 @@ img {max-width:100%; height:auto; display:block;}
       background: linear-gradient(135deg, #f9e4b7, #e6c77c, #d4af37);
       border: 1px solid #d4af37;
       border-radius: 14px;
-      color: #2b1d0e; /* teks gelap biar kontras */
+      color: #2b1d0e;
       box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
       transition: all 0.3s ease;
     }
-
     .features .card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 35px rgba(212, 175, 55, 0.55);
       background: linear-gradient(135deg, #fff3d6, #f0d890, #d4af37);
     }
 
-    /* === Product Card Gold + Tombol Hitam === */
+    /* === Product Card Gold === */
     .product-card {
       background: linear-gradient(135deg, #f9e4b7, #e6c77c, #d4af37);
       border: 1px solid #d4af37;
@@ -271,17 +281,14 @@ img {max-width:100%; height:auto; display:block;}
       box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
       transition: all 0.3s ease;
     }
-
-    .product-card .product-body {
-      color: #2b1d0e;
-    }
-
+    .product-card .product-body { color: #2b1d0e; }
     .product-card .product-title,
     .product-card .product-price {
       color: #2b1d0e;
       font-weight: 600;
     }
 
+    /* Tombol "Pesan" jadi hitam */
     .product-card .btn-primary-grad,
     #catalog .btn-primary-grad,
     #galleryGrid .btn-primary-grad {
@@ -289,7 +296,6 @@ img {max-width:100%; height:auto; display:block;}
       border: 1px solid #000 !important;
       color: #fff !important;
     }
-
     .product-card .btn-primary-grad:hover,
     #catalog .btn-primary-grad:hover,
     #galleryGrid .btn-primary-grad:hover {
@@ -298,104 +304,62 @@ img {max-width:100%; height:auto; display:block;}
       transform: scale(1.05);
     }
 
-/* === Tombol "Lihat" tetap putih transparan === */
-.product-card .btn-outline-secondary {
-  background: transparent !important;
-  border: 1px solid #fff !important;
-  color: #fff !important;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
+    /* Tombol "Lihat" transparan putih */
+    .product-card .btn-outline-secondary {
+      background: transparent !important;
+      border: 1px solid #fff !important;
+      color: #fff !important;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .product-card .btn-outline-secondary:hover {
+      background: rgba(255, 255, 255, 0.15) !important;
+      border-color: #fff !important;
+      color: #fff !important;
+      transform: scale(1.05);
+    }
 
-.product-card .btn-outline-secondary:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
-  border-color: #fff !important;
-  color: #fff !important;
-  transform: scale(1.05);
-}
+    /* === Form Pemesanan === */
+    #orderForm,
+    #orderForm .card {
+      background: #000 !important;
+      color: #fff !important;
+      border: 1px solid #d4af37 !important;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    #orderForm h2,
+    #orderForm .form-title {
+      color: #d4af37 !important;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #orderForm input,
+    #orderForm textarea,
+    #orderForm select {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      color: #fff !important;
+    }
+    #orderForm input::placeholder,
+    #orderForm textarea::placeholder {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
 
-/* === Efek Glow Emas Card === */
-.features .card:hover,
-.product-card:hover {
-  box-shadow: 0 0 18px rgba(212, 175, 55, 0.6),
-              0 0 30px rgba(212, 175, 55, 0.4),
-              0 0 45px rgba(212, 175, 55, 0.2);
-  transform: translateY(-6px) scale(1.02);
-  border-color: #ffd97a;
-}
+    /* === Section Titles === */
+    section h2,
+    section .section-title {
+      color: #d4af37 !important;
+      font-weight: 700;
+      text-align: center;
+    }
 
-#orderForm h2, 
-#orderForm h3, 
-#orderForm .form-title {
-  color: #d4af37 !important; /* emas */
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* === Fix Warna Judul Form Pemesanan Cepat === */
-#orderForm, 
-#orderForm h2, 
-#orderForm h3, 
-#orderForm .form-title {
-  color: #d4af37 !important; /* emas biar kontras */
-  font-weight: 700;
-  text-align: center;
-}
-
-/* === Hapus background putih di katalog/galeri === */
-#catalog,
-#gallery,
-#galleryGrid,
-.catalog-section,
-.gallery-section {
-  background: #000 !important;
-  color: #fff !important;
-}
-
-/* Styling untuk judul biar emas premium */
-#catalog h2, 
-#gallery h2, 
-#gallery .section-title {
-  color: #d4af37 !important;
-  font-weight: 700;
-  text-align: center;
-}
-
-/* === Fix Warna Judul Form Pemesanan Cepat === */
-#orderForm, 
-#orderForm h2, 
-#orderForm h3, 
-#orderForm .form-title {
-  color: #d4af37 !important; /* emas biar kontras */
-  font-weight: 700;
-  text-align: center;
-}
-
-/* === Fix Background Putih Jadi Hitam Elegan === */
-section,
-#catalog,
-#gallery,
-#galleryGrid,
-#orderForm,
-footer {
-  background: #000 !important;
-  color: #fff !important;
-}
-
-/* Biar input form tetap jelas */
-#orderForm input,
-#orderForm textarea,
-#orderForm select {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: #fff !important;
-}
-
-#orderForm input::placeholder,
-#orderForm textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
+    /* === Footer Logo Fix === */
+    footer img {
+      max-height: 60px;
+      filter: brightness(0) invert(1); /* logo hitam jadi putih */
+    }
   </style>
 </head>
 

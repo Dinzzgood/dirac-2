@@ -549,6 +549,66 @@ img {max-width:100%; height:auto; display:block;}
       max-height: 60px;
       filter: brightness(0) invert(1); /* logo hitam jadi putih */
     }
+/* ===== Perbaikan Section FAQ & Testimonial ===== */
+
+/* Kasih padding & jarak antar section */
+#faq {
+  padding: 60px 20px;
+  background: #111; /* ganti latar belakang section jadi gelap biar kontras */
+}
+
+/* Card FAQ */
+#faq .accordion-item {
+  background: #fff; /* card putih */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+/* Judul FAQ */
+#faq .accordion-button {
+  background: #f9f9f9;
+  color: #111;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  background: #e6e6e6;
+}
+
+/* Isi FAQ */
+#faq .accordion-body {
+  background: #fff;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Testimonial Section */
+#faq .testi-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 12px 0;
+  color: #333;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+#faq .testi-card strong {
+  color: #000;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+#faq .testi-card p {
+  font-style: italic;
+  color: #444;
+}
   </style>
 </head>
 

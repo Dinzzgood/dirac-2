@@ -609,6 +609,58 @@ img {max-width:100%; height:auto; display:block;}
   font-style: italic;
   color: #444;
 }
+/* ===== Perbaikan Form Pemesanan ===== */
+#orderForm {
+  background: #fff; /* card putih */
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 25px;
+  color: #111;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Judul Form */
+#orderForm h2,
+#orderForm .form-title {
+  color: #d4af37; /* emas */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input & Textarea */
+#orderForm input,
+#orderForm textarea,
+#orderForm select {
+  background: #f9f9f9;  /* abu terang */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #111;
+  width: 100%;
+}
+
+#orderForm input::placeholder,
+#orderForm textarea::placeholder {
+  color: #888;
+}
+
+/* Tombol */
+#orderForm .btn-primary-grad {
+  background: linear-gradient(90deg, #d4af37, #b88649);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+#orderForm .btn-primary-grad:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
   </style>
 </head>
 

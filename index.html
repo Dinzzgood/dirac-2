@@ -352,6 +352,31 @@ img {max-width:100%; height:auto; display:block;}
   font-weight: 700;
   text-align: center;
 }
+
+/* === Fix Background Putih Jadi Hitam Elegan === */
+section,
+#catalog,
+#gallery,
+#galleryGrid,
+#orderForm,
+footer {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Biar input form tetap jelas */
+#orderForm input,
+#orderForm textarea,
+#orderForm select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+
+#orderForm input::placeholder,
+#orderForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
   </style>
 </head>
 

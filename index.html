@@ -187,78 +187,118 @@
 /* Ensure images have width/height to avoid CLS and use lazy decoding */
 img {max-width:100%; height:auto; display:block;}
 
- /* === Hero Background Gradient === */   
-/* === HERO BACKGROUND === */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #0d0d0d 0%, #3b2d1f 50%, #000000 100%) !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  z-index: 0;
-}
+   /* === HERO BACKGROUND === */
+<head>
+  ...
+  <style>
+    /* === HERO BACKGROUND === */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0d0d0d 0%, #3b2d1f 50%, #000000 100%) !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-attachment: fixed !important;
+      z-index: 0;
+    }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45) !important;
-  z-index: 1;
-}
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45) !important;
+      z-index: 1;
+    }
 
-/* === GLOBAL PAGE BACKGROUND === */
-body {
-  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 40%, #000000 100%);
-  color: #ffffff;
-}
+    /* === GLOBAL PAGE BACKGROUND === */
+    body {
+      background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 40%, #000000 100%);
+      color: #ffffff;
+    }
 
-/* Card agar elegan di background gelap */
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  color: #ffffff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
+    /* Card default (untuk elemen umum) */
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
 
-/* Tombol utama warna emas */
-.btn-primary {
-  background: linear-gradient(90deg, #e0a85f, #d18b28);
-  border: none;
-  color: #fff;
-  font-weight: 600;
-}
-.btn-primary:hover {
-  background: linear-gradient(90deg, #d18b28, #e0a85f);
-  transform: scale(1.02);
-}
+    /* Tombol utama warna emas */
+    .btn-primary {
+      background: linear-gradient(90deg, #e0a85f, #d18b28);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #d18b28, #e0a85f);
+      transform: scale(1.02);
+    }
 
-/* Tombol outline biar kontras */
-.btn-outline-light {
-  border: 1px solid #fff;
-  color: #fff;
-}
-.btn-outline-light:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
+    /* Tombol outline biar kontras */
+    .btn-outline-light {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
 
-/* === Card Features Gold === */
-.features .card {
-  background: linear-gradient(135deg, #f9e4b7, #e6c77c, #d4af37);
-  border: 1px solid #d4af37;
-  border-radius: 14px;
-  color: #2b1d0e; /* teks gelap biar kontras */
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
-  transition: all 0.3s ease;
-}
+    /* === Card Features Gold === */
+    .features .card {
+      background: linear-gradient(135deg, #f9e4b7, #e6c77c, #d4af37);
+      border: 1px solid #d4af37;
+      border-radius: 14px;
+      color: #2b1d0e; /* teks gelap biar kontras */
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+      transition: all 0.3s ease;
+    }
 
-.features .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.55);
-  background: linear-gradient(135deg, #fff3d6, #f0d890, #d4af37);
-}    
-</style>
+    .features .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(212, 175, 55, 0.55);
+      background: linear-gradient(135deg, #fff3d6, #f0d890, #d4af37);
+    }
+
+    /* === Product Card Gold + Tombol Hitam === */
+    .product-card {
+      background: linear-gradient(135deg, #f9e4b7, #e6c77c, #d4af37);
+      border: 1px solid #d4af37;
+      border-radius: 14px;
+      color: #2b1d0e;
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
+      transition: all 0.3s ease;
+    }
+
+    .product-card .product-body {
+      color: #2b1d0e;
+    }
+
+    .product-card .product-title,
+    .product-card .product-price {
+      color: #2b1d0e;
+      font-weight: 600;
+    }
+
+    .product-card .btn-primary-grad,
+    #catalog .btn-primary-grad,
+    #galleryGrid .btn-primary-grad {
+      background: #000 !important;
+      border: 1px solid #000 !important;
+      color: #fff !important;
+    }
+
+    .product-card .btn-primary-grad:hover,
+    #catalog .btn-primary-grad:hover,
+    #galleryGrid .btn-primary-grad:hover {
+      background: #222 !important;
+      border-color: #222 !important;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
 
   <!-- Open Graph & Twitter (added by assistant) -->
   <meta property="og:title" content="Dirac Parfum — Reseller Parfum Premium & Resmi" />

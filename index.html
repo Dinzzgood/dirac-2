@@ -255,38 +255,83 @@ It's recommended to generate optimized WebP files and serve them with proper cac
 
   <main id="main" role="main">
 
-    <!-- HERO -->
-    <section id="beranda" class="hero" aria-label="Beranda">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-content text-center">
-        <h1 class="fade-up fade-delay-1">Dirac Parfum</h1>
-        <p class="lead fade-up fade-delay-2">Wewangian premium — curated collection yang meningkatkan kesan. Pilihan original & inspired, dikurasi khusus untuk Anda.</p>
-        <div class="hero-cta mt-3 fade-up fade-delay-3">
-          <a class="btn btn-primary-grad" href="#produk">Lihat Produk Unggulan</a>
-          <a class="btn btn-outline-ghost" href="#galeri">Jelajahi Galeri</a>
-        </div>
-        
+    <!-- HERO SECTION -->
+<section class="hero position-relative">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
 
-<div class="hero-products mt-4 d-flex justify-content-center gap-3 flex-wrap">
-  <div class="hero-prod">
-    <img src="IMG_2254.jpeg" alt="Dune Eau de Toilette" />
-    <p class="small mt-2">Dune Eau de Toilette</p>
-  </div>
-  <div class="hero-prod">
-    <img src="IMG_2257.jpeg" alt="Sauvage Dior Box" />
-    <p class="small mt-2">Sauvage Dior Box</p>
-  </div>
-  <div class="hero-prod">
-    <img src="IMG_2259.jpeg" alt="Sauvage Dior Bottle" />
-    <p class="small mt-2">Sauvage Dior Bottle</p>
-  </div>
-</div>
+  <div class="container text-center text-light position-relative" style="z-index:2;">
+    <h1 class="display-4 fw-bold">Dirac Parfum</h1>
+    <p class="lead mb-4">Wewangian premium — curated collection yang meningkatkan kesan.
+      Pilihan original & inspired, dikurasi khusus untuk Anda.</p>
 
+    <div class="d-flex gap-3 justify-content-center">
+      <a class="btn btn-primary" href="#produk">Lihat Produk Unggulan</a>
+      <a class="btn btn-outline-light" href="#galeri">Jelajahi Galeri</a>
+    </div>
 
-        <div class="mt-4 muted">Nomor penjualan & support: <a href="https://wa.me/62882009257589" class="text-white text-decoration-underline">+62 882-0092-57589</a></div>
+    <!-- contoh produk hero (opsional) -->
+    <div class="hero-products mt-4 d-flex justify-content-center gap-3 flex-wrap">
+      <div class="hero-prod">
+        <img src="IMG_2254.jpeg" alt="Dune Eau de Toilette" />
+        <p class="small mt-2">Dune Eau de Toilette</p>
       </div>
-    </section>
+      <div class="hero-prod">
+        <img src="IMG_2257.jpeg" alt="Sauvage Dior Box" />
+        <p class="small mt-2">Sauvage Dior Box</p>
+      </div>
+      <div class="hero-prod">
+        <img src="IMG_2259.jpeg" alt="Sauvage Dior Bottle" />
+        <p class="small mt-2">Sauvage Dior Bottle</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  min-height:72vh;            /* bisa jadi 100vh kalau mau full layar */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+/* Background pakai file kamu: background.PNG */
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background-image:url('background.PNG'); /* <- pastikan nama & hurufnya sama persis */
+  background-size:cover;
+  background-position:center; /* fokus tengah */
+  background-repeat:no-repeat;
+  transform:scale(1.02);
+  z-index:0;
+}
+
+/* Overlay biar teks jelas */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.35));
+  z-index:1;
+}
+
+/* Gambar kecil di hero */
+.hero-prod img{
+  width:140px; height:140px; object-fit:cover; border-radius:14px;
+  display:block; background:#fff;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
+
+/* Responsif: atur crop agar enak dilihat di HP */
+@media (max-width:768px){
+  .hero{ min-height:64vh; }
+  .hero-bg{ background-position:center top; } /* geser fokus ke atas saat mobile */
+}
+</style>
 
     <!-- About Us (added by assistant) -->
     

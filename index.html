@@ -187,6 +187,23 @@
 /* Ensure images have width/height to avoid CLS and use lazy decoding */
 img {max-width:100%; height:auto; display:block;}
 
+ /* === Hero Background Gradient === */   
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0d0d0d 0%, #3b2d1f 50%, #000000 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}    
 </style>
 
   <!-- Open Graph & Twitter (added by assistant) -->

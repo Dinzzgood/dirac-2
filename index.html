@@ -188,6 +188,7 @@
 img {max-width:100%; height:auto; display:block;}
 
  /* === Hero Background Gradient === */   
+/* === HERO BACKGROUND === */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -203,6 +204,43 @@ img {max-width:100%; height:auto; display:block;}
   inset: 0;
   background: rgba(0, 0, 0, 0.45) !important;
   z-index: 1;
+}
+
+/* === GLOBAL PAGE BACKGROUND === */
+body {
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 40%, #000000 100%);
+  color: #ffffff;
+}
+
+/* Card agar elegan di background gelap */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Tombol utama warna emas */
+.btn-primary {
+  background: linear-gradient(90deg, #e0a85f, #d18b28);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #d18b28, #e0a85f);
+  transform: scale(1.02);
+}
+
+/* Tombol outline biar kontras */
+.btn-outline-light {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 </style>
 
